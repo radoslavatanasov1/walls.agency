@@ -22,15 +22,15 @@ const NavBar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-[#44475a] rounded-box z-50 mt-3 w-52 p-2 shadow">
-            <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">About us</a></li>
-            <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">Team</a></li>
+            <li><a href='/#about' className="text-[#f8f8f2] hover:text-[#ff79c6]">About us</a></li>
+            <li><a href='/#team' className="text-[#f8f8f2] hover:text-[#ff79c6]">Team</a></li>
             <li>
               <a className="text-[#f8f8f2] hover:text-[#ff79c6]">Services</a>
               <ul className="p-2 bg-[#44475a]">
-                <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">Full Stack Developer</a></li>
-                <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">Blockchain Developer</a></li>
-                <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">UI/UX Design</a></li>
-                <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">Consulting & Strategy</a></li>
+                <li><a href='/#fullstack' className="text-[#f8f8f2] hover:text-[#ff79c6]">Full Stack Developer</a></li>
+                <li><a href='/#blockchain' className="text-[#f8f8f2] hover:text-[#ff79c6]">Blockchain Developer</a></li>
+                <li><a href='/#uiux' className="text-[#f8f8f2] hover:text-[#ff79c6]">UI/UX Design</a></li>
+                <li><a href='/contact' className="text-[#f8f8f2] hover:text-[#ff79c6]">Consulting & Strategy</a></li>
               </ul>
             </li>
           </ul>
@@ -39,7 +39,7 @@ const NavBar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center">
-          <li><a className="text-[#f8f8f2] hover:text-[#ff79c6]">About us</a></li>
+          <li><a href='/#about' className="text-[#f8f8f2] hover:text-[#ff79c6]">About us</a></li>
           <li><a href='/#team' className="text-[#f8f8f2] hover:text-[#ff79c6]">Team</a></li>
           <li>
             <details className="flex items-center">

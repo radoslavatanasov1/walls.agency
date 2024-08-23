@@ -79,3 +79,9 @@ html {
   position: relative;
   z-index: 10; /* Ensure content is above the overlay */
 }
+.footer {
+  padding: 1rem;
+  background-color: #282a36;
+  color: #f8f8f2;
+  text-align: center;
+}

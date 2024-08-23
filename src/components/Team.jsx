@@ -18,6 +18,15 @@ const teamMembers = [
     experience: "6 Years Experience",
     image: IbrahimK,
     details: "Ibrahim has over 6 years of experience as a Fullstack Developer. His expertise spans both front-end and back-end technologies, making him a versatile and valuable team member.",
+    projects: [
+      { name: "GDN Solution", url: "https://gdnsolution.com" },
+      { name: "Alpha Cargo Line", url: "https://alphacargoline.com" },
+      { name: "Harmoni Jaa", url: "https://harmonijaa.lv" },
+      { name: "Conscious Leap", url: "https://consciousleap.co" },
+      { name: "Taya Living", url: "https://tayaliving.com" },
+      { name: "Vi Watch AI", url: "https://viwatchai.com" },
+      { name: "Buati Price", url: "https://buatiprice.com" },
+    ],
   },
 ];
 
@@ -72,7 +81,7 @@ const Team = () => {
 
         {/* Total Years of Experience */}
         <div className="mt-16 text-white text-4xl md:text-5xl font-extrabold">
-          <p>Total <span className="text-primary">16 Years</span> of Experience!</p>
+          <p>Total <span className="text-primary">9 Years</span> of Experience!</p>
         </div>
       </div>
 
@@ -99,6 +108,22 @@ const Team = () => {
                   <a href={selectedMember.agency} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 underline">
                     Agency Website
                   </a>
+                </div>
+              )}
+
+              {/* Display projects if available */}
+              {selectedMember.projects && (
+                <div className="mt-4">
+                  <h4 className="text-xl font-semibold mb-2">Projects</h4>
+                  <ul className="list-disc list-inside">
+                    {selectedMember.projects.map((project, index) => (
+                      <li key={index}>
+                        <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 underline">
+                          {project.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
 

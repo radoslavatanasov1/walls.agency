@@ -18,7 +18,7 @@ const Footer = () => {
         <p className="mt-4 text-[#ff79c6] font-bold">
           Walls Agency Inc.
           <br />
-          Over 16+ years of experience!
+          Over 9+ years of experience!
         </p>
       </aside>
       <nav>

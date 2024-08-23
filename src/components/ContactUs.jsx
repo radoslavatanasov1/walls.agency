@@ -9,6 +9,7 @@ const ContactUs = () => {
     budget: '',
     message: ''
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -25,11 +26,34 @@ const ContactUs = () => {
     setStep(step - 1);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send the data to a server or an email
-    console.log(formData);
+
+    const response = await fetch('https://formspree.io/f/xovapngv', { // Your Formspree endpoint
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+    } else {
+      alert('There was an issue with submitting the form. Please try again.');
+    }
   };
+
+  if (submitted) {
+    return (
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Thank You!</h2>
+          <p className="mb-8">Your message has been sent. We will get back to you shortly.</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-20">
@@ -89,7 +113,6 @@ const ContactUs = () => {
                 <option value="UI/UX Design">UI/UX Design</option>
                 <option value="Consulting">Consulting</option>
                 <option value="Other">Other</option>
-
               </select>
               <div className="flex justify-between mt-4">
                 <button type="button" onClick={prevStep} className="btn btn-secondary">Back</button>

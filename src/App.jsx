@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import AboutUs from './components/AboutUs';
@@ -6,7 +7,7 @@ import Team from './components/Team';
 import Services from './components/Services';
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PrivacyPolicy from './components/PrivacyPolicy'; // Import the Privacy Policy component
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
               </>
             } />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* Add Privacy Policy Route */}
           </Routes>
         </div>
         <Footer />

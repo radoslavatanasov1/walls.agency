@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 import PrivacyPolicy from './components/PrivacyPolicy'; // Import the Privacy Policy component
+import Pricing from './components/Pricing'; // Import the Pricing component
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
                 <AboutUs />
                 <Team />
                 <Services />
+                <Pricing /> {/* Add the Pricing component here */}
+
               </>
             } />
             <Route path="/contact" element={<ContactUs />} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../public/logo.png'; // Adjust the path to your logo image
 
 const NavBar = () => {
   return (
@@ -33,9 +34,12 @@ const NavBar = () => {
                 <li><a href='/contact' className="text-[#f8f8f2] hover:text-[#ff79c6]">Consulting & Strategy</a></li>
               </ul>
             </li>
+            <li><a href='/#pricing' className="text-[#f8f8f2] hover:text-[#ff79c6]">Pricing</a></li>
           </ul>
         </div>
-        <a href="/" className="btn btn-ghost normal-case text-xl text-[#ff79c6] flex items-center h-full">Walls Agency</a>
+        <a href="/" className="btn btn-ghost normal-case flex items-center h-full">
+          <img src={logo} alt="Walls Agency logo" className="h-10" /> {/* Adjust the logo height as needed */}
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center">
@@ -52,10 +56,11 @@ const NavBar = () => {
               </ul>
             </details>
           </li>
+          <li><a href='/#pricing' className="text-[#f8f8f2] hover:text-[#ff79c6]">Pricing</a></li>
         </ul>
       </div>
       <div className="navbar-end flex items-center">
-        <a href='/contact' className="btn bg-[#ff79c6] hover:bg-[#50fa7b] text-[#282a36] border-none flex items-center">Contact Us</a>
+        <a href='/contact' className="btn bg-[#ff79c6] text-white border-none flex items-center">Contact Us</a>
       </div>
     </div>
   );

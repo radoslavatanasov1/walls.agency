@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RadoslavA from '../assets/RadoslavA.png';
 import IbrahimK from '../assets/IbrahmiK.png';
+import Maxim from '../assets/maxim.png';
 
 const teamMembers = [
   {
@@ -28,6 +29,17 @@ const teamMembers = [
       { name: "Buati Price", url: "https://buatiprice.com" },
     ],
   },
+  {
+    name: "Maxim",
+    role: "UI/UX Designer",
+    experience: "5 Years Experience",
+    image: Maxim,
+    details: "Maxim is one of the most exceptional designers you'll find at Walls Agency, known for his distinctive and innovative approach to design.",
+    projects: [
+      { name: "Squirle NFT" },
+
+    ],
+  },
 ];
 
 const Team = () => {
@@ -50,34 +62,35 @@ const Team = () => {
         </p>
 
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="relative card w-full bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-pulse rounded-lg overflow-hidden"
-                data-aos="fade-up"
-                data-aos-delay={`${index * 100}`}
-              >
-                <figure className="flex justify-center items-center px-10 pt-10">
-                  <img src={member.image} alt={member.name} className="rounded-full w-24 h-24" />
-                </figure>
-                <div className="card-body flex flex-col items-center text-center text-white">
-                  <h3 className="card-title">{member.name}</h3>
-                  <p>{member.role}</p>
-                  <p>{member.experience}</p>
-                </div>
-                <div className="absolute bottom-0 left-0 w-full h-0 bg-neutral transition-all duration-300 ease-in-out hover:h-20 flex items-center justify-center">
-                  <button
-                    onClick={() => openModal(member)}
-                    className="btn btn-outline border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white"
-                  >
-                    SHOW
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {teamMembers.map((member, index) => (
+      <div
+        key={index}
+        className="relative card w-full bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-pulse rounded-lg overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay={`${index * 100}`}
+      >
+        <figure className="flex justify-center items-center px-10 pt-10">
+          <img src={member.image} alt={member.name} className="rounded-full w-24 h-24" />
+        </figure>
+        <div className="card-body flex flex-col items-center text-center text-white">
+          <h3 className="card-title">{member.name}</h3>
+          <p>{member.role}</p>
+          <p>{member.experience}</p>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-0 bg-neutral transition-all duration-300 ease-in-out hover:h-20 flex items-center justify-center">
+          <button
+            onClick={() => openModal(member)}
+            className="btn btn-outline border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white"
+          >
+            SHOW
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* Total Years of Experience */}
         <div className="mt-16 text-white text-4xl md:text-5xl font-extrabold">
